@@ -26,7 +26,7 @@ from endpoints.api import Endpoint
 from endpoints.exceptions import HttpMethodIsNotSupported
 
 
-__version__ = "0.3.1"
+__version__ = "0.4.0"
 __author__ = "Ramon Moraes"
 __author_email__ = "ramonmoraes8080@gmail.com"
 __license__ = "GPLv3"
