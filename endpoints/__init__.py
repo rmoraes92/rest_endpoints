@@ -22,7 +22,7 @@ from endpoints.methods import POST
 from endpoints.methods import PUT
 from endpoints.methods import PATCH
 from endpoints.methods import DELETE
-from endpoints.endpoints import Endpoint
+from endpoints.api import Endpoint
 from endpoints.exceptions import HttpMethodIsNotSupported
 
 
