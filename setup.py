@@ -34,7 +34,7 @@ with open('README.md') as f:
 setup(
     name=__app_name__,
     version=__version__,
-    url='https://gitlab.com/velvetkeyboad/py-endpoints',
+    url='https://codeberg.org/prometheus/py-endpoints',
     author=__author__,
     author_email=__author_email__,
     license=__license__,
