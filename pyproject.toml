@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "rest-endpoints"
+version = "0.1.0"
+description = "library to help mapping ReST API endpoints"
+authors = ["Ramon Moraes <nocfg@proton.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+packaging = "^24.2"
+# pytest = "^8.3.3"
+ruff = "^0.7.3"
+flake8 = "^7.1.1"
+flake8-pyproject = "^1.2.3"
+
+[build-system]
+requires = ["poetry-core", "packaging"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+ignore = ["W391"]
