@@ -73,7 +73,7 @@ cred = ApiKeyCredential()
 endpoint = DefineEndpoint(cred)
 resp = endpoint.get(query_params={
     "term": "wat",
-    })
+})
 
 # resp here is a Response object from requests module/library
 print(resp.status_code)
