@@ -1,5 +1,8 @@
 name: CI
-on: pull_request
+
+on:
+  push:
+    branches: [ "release/*" ]
 
 env:
   POETRY_PYPI_TOKEN_PYPI: ${{ secrets.POETRY_PYPI_TOKEN_PYPI }}
@@ -26,8 +29,8 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Dependencies
         run: poetry install
-      - name: Test
+      - name: Running Unit Tests
         run: poetry run python -m unittest
-      - name: Publish
+      - name: Publish To PYPI
         run: poetry publish --build --skip-existing
 
