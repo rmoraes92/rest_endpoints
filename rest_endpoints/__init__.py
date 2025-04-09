@@ -1,7 +1,7 @@
-'''
+"""
 The MIT License (MIT)
 
-Copyright © 2024 Ramon Moraes
+Copyright © 2024 Ramon Moraes <ramonmoraes.foss@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -20,8 +20,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-'''
-
+"""
 
 from rest_endpoints.methods import (
     GET,
@@ -32,13 +31,17 @@ from rest_endpoints.methods import (
 )
 from rest_endpoints.credentials import Credential
 from rest_endpoints.api import Endpoint
-from rest_endpoints.aio_api import AsyncEndpoint
+
+try:
+    from rest_endpoints.aio_api import AsyncEndpoint
+except ModuleNotFoundError as ex:
+    pass  # TODO do we need to show an warning?
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
 
 
 __version__ = "0.1.0"
 __author__ = "Ramon Moraes"
-__author_email__ = "nocfg@proton.me"
+__author_email__ = "ramonmoraes.foss@gmail.com"
 __license__ = "MIT"
 __app_name__ = "rest_endpoints"
 __description__ = "ReST API Endpoint mapper"
@@ -50,6 +53,6 @@ __all__ = [
     "DELETE",
     "Credential",
     "Endpoint",
+    "AsyncEndpoint",
     "HttpMethodIsNotSupported",
 ]
-
