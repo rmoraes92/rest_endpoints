@@ -51,13 +51,13 @@ class Endpoint(object):
 
     def get_url(self):
         path = self.get_path()
-        if self.domain[-1] == '/' and path[0] == '/':
+        if self.domain[-1] == "/" and path[0] == "/":
             domain = self.domain[:-1]
-        elif self.domain[-1] != '/' and path[0] != '/':
-            domain = self.domain + '/'
+        elif self.domain[-1] != "/" and path[0] != "/":
+            domain = self.domain + "/"
         else:
             domain = self.domain
-        return f'{domain}{path}'
+        return f"{domain}{path}"
 
     def get_headers(self, extra=None):
         ret = {}
@@ -75,8 +75,9 @@ class Endpoint(object):
         ret.update(extra or {})
         return ret
 
-    def request(self, method, headers=None, query_params=None, data=None,
-                json_data=None):
+    def request(
+        self, method, headers=None, query_params=None, data=None, json_data=None
+    ):
         if self.methods and method not in self.methods:
             raise HttpMethodIsNotSupported(method, self.methods)
 
@@ -103,11 +104,8 @@ class Endpoint(object):
     def put(self, headers=None, query_params=None, data=None, json_data=None):
         return self.request(PUT, headers, query_params, data, json_data)
 
-    def patch(
-            self, headers=None, query_params=None, data=None, json_data=None):
+    def patch(self, headers=None, query_params=None, data=None, json_data=None):
         return self.request(PATCH, headers, query_params, data, json_data)
 
-    def delete(
-            self, headers=None, query_params=None, data=None, json_data=None):
+    def delete(self, headers=None, query_params=None, data=None, json_data=None):
         return self.request(DELETE, headers, query_params, data, json_data)
-

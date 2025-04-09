@@ -1,4 +1,4 @@
-'''
+"""
 The MIT License (MIT)
 
 Copyright © 2024 Ramon Moraes
@@ -20,18 +20,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-'''
+"""
 
 
 class HttpMethodIsNotSupported(Exception):
     def __init__(self, method, methods):
-        '''
+        """
         Params:
             method (str):
                 String representing the method that's not supported
             methods (list of str):
                 List of Strings representing the supported methods
-        '''
+        """
         msg = f'"{method}" is not in the list of supported methods: {methods}'
         super().__init__(msg)
-
