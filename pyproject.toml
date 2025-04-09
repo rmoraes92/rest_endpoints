@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rest-endpoints"
-version = "0.1.0"
+version = "0.2.0"
 description = "library to help mapping ReST API endpoints"
 authors = ["Ramon Moraes <ramonmoraes.foss@gmail.com>"]
 license = "MIT"
