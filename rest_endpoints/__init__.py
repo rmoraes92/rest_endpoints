@@ -32,6 +32,7 @@ from rest_endpoints.methods import (
 )
 from rest_endpoints.credentials import Credential
 from rest_endpoints.api import Endpoint
+from rest_endpoints.aio_api import AsyncEndpoint
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
 
 
