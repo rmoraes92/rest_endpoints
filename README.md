@@ -1,6 +1,6 @@
 # rest-endpoints
 
-library to help mapping ReST API endpoints
+A object oriented library that helps you map and organize your HTTP ReST API endpoint calls.
 
 
 ## Install
