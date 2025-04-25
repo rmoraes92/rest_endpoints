@@ -7,6 +7,9 @@ A object oriented library that helps you map and organize your HTTP ReST API end
 
 `pip install rest-endpoints`
 
+for async support
+
+`pip install rest-endpoint[async]`
 
 ## Usage
 
@@ -113,6 +116,47 @@ if __name__ == "__main__":
     # resp here is a Response object from requests module/library
     print(resp.status_code)
     print(resp.content)
+```
+
+
+### Urban Dictionary API using asyncio
+
+```python
+import asyncio
+from rest_endpoints import Credential
+from rest_endpoints import AsyncEndpoint
+
+
+class ApiKeyCredential(Credential):
+    headers = {
+        "x-rapidapi-host": "mashape-community-urban-dictionary.p.rapidapi.com",
+        "x-rapidapi-key": "SIGN-UP-FOR-KEY",
+        "useQueryString": "true",
+        }
+
+
+class CommunityUrbanDict(AsyncEndpoint):
+    domain = "https://mashape-community-urban-dictionary.p.rapidapi.com"
+
+
+class DefineEndpoint(CommunityUrbanDict):
+    path = "/define"
+
+
+async def main():
+    cred = ApiKeyCredential()
+    endpoint = DefineEndpoint(cred)
+    resp = await endpoint.get(query_params={
+        "term": "wat",
+        })
+
+    # resp here is a Response object from requests module/library
+    print(resp.status_code)
+    print(resp.content)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 We added a sample code for this scenario over the `examples/` folder
