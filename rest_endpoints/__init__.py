@@ -44,7 +44,10 @@ __author__ = "Ramon Moraes"
 __author_email__ = "ramonmoraes.foss@gmail.com"
 __license__ = "MIT"
 __app_name__ = "rest_endpoints"
-__description__ = "ReST API Endpoint mapper"
+__description__ = (
+    "A object oriented library that helps you map and organize your HTTP "
+    "ReST API endpoint calls."
+)
 __all__ = [
     "GET",
     "POST",
