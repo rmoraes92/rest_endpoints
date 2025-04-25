@@ -34,7 +34,7 @@ from rest_endpoints.api import Endpoint
 
 try:
     from rest_endpoints.aio_api import AsyncEndpoint
-except ModuleNotFoundError as ex:
+except ModuleNotFoundError:
     pass  # TODO do we need to show an warning?
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
 
