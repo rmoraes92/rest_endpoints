@@ -39,7 +39,7 @@ except ModuleNotFoundError as ex:
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
 
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __author__ = "Ramon Moraes"
 __author_email__ = "ramonmoraes.foss@gmail.com"
 __license__ = "MIT"
