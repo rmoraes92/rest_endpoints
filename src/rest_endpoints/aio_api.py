@@ -24,9 +24,14 @@ SOFTWARE.
 
 import json
 
-import aiohttp
+from rest_endpoints.exceptions import HttpMethodIsNotSupported, CouldNotImportAioHttpModule
 
-from rest_endpoints.exceptions import HttpMethodIsNotSupported
+try:
+    import aiohttp
+except ModuleNotFoundError:
+    raise CouldNotImportAioHttpModule()
+
+
 from rest_endpoints.methods import DELETE, GET, PATCH, POST, PUT
 
 from .api import Endpoint
