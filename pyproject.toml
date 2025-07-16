@@ -6,8 +6,10 @@ authors = ["Ramon Moraes <ramonmoraes.foss@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
+# packages = [{include = "rest_endpoints", from = "src"}]
+
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "^3.9.0"
 requests = "^2.32.3"
 
 [tool.poetry.extras]
@@ -19,10 +21,9 @@ packaging = "^24.2"
 ruff = "^0.7.3"
 flake8 = "^7.1.1"
 flake8-pyproject = "^1.2.3"
+isort = "^6.0.1"
+black = "^25.1.0"
 
 [build-system]
 requires = ["poetry-core", "packaging"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.flake8]
-ignore = ["W391"]
