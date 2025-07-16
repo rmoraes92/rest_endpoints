@@ -1,8 +1,10 @@
-name: CI
+name: Publish to PyPI
 
 on:
-  push:
-    branches: ["release/*"]
+  workflow_run:
+    workflows: ["Executing Unit Tests"] # Name of the testing workflow
+    types:
+      - completed # Trigger when the 'XYZ' workflow completes
 
 env:
   POETRY_PYPI_TOKEN_PYPI: ${{ secrets.POETRY_PYPI_TOKEN_PYPI }}
@@ -10,7 +12,7 @@ env:
 #  POETRY_HTTP_BASIC_PYPI_PASSWORD: ${{ secrets.POETRY_HTTP_BASIC_PYPI_PASSWORD }}
 
 jobs:
-  ci:
+  publish:
     strategy:
       fail-fast: false
       matrix:
@@ -18,6 +20,9 @@ jobs:
         poetry-version: ["latest", "main", "1.8.4"]
         os: [ubuntu-22.04, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    if: |
+      github.event.workflow_run.conclusion == 'success' &&
+      startsWith(github.event.workflow_run.head_branch, 'release/')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
