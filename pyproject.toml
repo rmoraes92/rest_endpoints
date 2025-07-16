@@ -19,8 +19,6 @@ async = ["aiohttp"]
 packaging = "^24.2"
 # pytest = "^8.3.3"
 ruff = "^0.7.3"
-flake8 = "^7.1.1"
-flake8-pyproject = "^1.2.3"
 isort = "^6.0.1"
 black = "^25.1.0"
 
