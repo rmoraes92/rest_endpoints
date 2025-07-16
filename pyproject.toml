@@ -6,7 +6,7 @@ authors = ["Ramon Moraes <ramonmoraes.foss@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
-# packages = [{include = "rest_endpoints", from = "src"}]
+packages = [{include = "rest_endpoints", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9.0"
