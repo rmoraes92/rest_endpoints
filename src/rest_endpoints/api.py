@@ -23,15 +23,11 @@ SOFTWARE.
 """
 
 import json
+
 import requests
+
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
-from rest_endpoints.methods import (
-    GET,
-    POST,
-    PUT,
-    PATCH,
-    DELETE,
-)
+from rest_endpoints.methods import DELETE, GET, PATCH, POST, PUT
 
 
 class Endpoint(object):

@@ -23,16 +23,11 @@ SOFTWARE.
 """
 
 import json
+
 import aiohttp
 
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
-from rest_endpoints.methods import (
-    GET,
-    POST,
-    PUT,
-    PATCH,
-    DELETE,
-)
+from rest_endpoints.methods import DELETE, GET, PATCH, POST, PUT
 
 from .api import Endpoint
 

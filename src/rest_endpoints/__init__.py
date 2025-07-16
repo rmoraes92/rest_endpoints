@@ -22,22 +22,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from rest_endpoints.methods import (
-    GET,
-    POST,
-    PUT,
-    PATCH,
-    DELETE,
-)
-from rest_endpoints.credentials import Credential
 from rest_endpoints.api import Endpoint
+from rest_endpoints.credentials import Credential
+from rest_endpoints.methods import DELETE, GET, PATCH, POST, PUT
 
 try:
     from rest_endpoints.aio_api import AsyncEndpoint
 except ModuleNotFoundError:
     pass  # TODO do we need to show an warning?
 from rest_endpoints.exceptions import HttpMethodIsNotSupported
-
 
 __version__ = "0.2.0"
 __author__ = "Ramon Moraes"
