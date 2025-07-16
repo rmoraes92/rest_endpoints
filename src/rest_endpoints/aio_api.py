@@ -24,7 +24,10 @@ SOFTWARE.
 
 import json
 
-from rest_endpoints.exceptions import HttpMethodIsNotSupported, CouldNotImportAioHttpModule
+from rest_endpoints.exceptions import (
+    CouldNotImportAioHttpModule,
+    HttpMethodIsNotSupported,
+)
 
 try:
     import aiohttp
