@@ -24,10 +24,7 @@ SOFTWARE.
 
 import unittest
 
-from rest_endpoints import Endpoint
-from rest_endpoints import Credential
-from rest_endpoints import GET
-from rest_endpoints import HttpMethodIsNotSupported
+from rest_endpoints import GET, Credential, Endpoint, HttpMethodIsNotSupported
 
 
 class EndpointTestCase(unittest.TestCase):

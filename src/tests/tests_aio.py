@@ -22,16 +22,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+import asyncio
 import unittest
 
+from rest_endpoints import GET, AsyncEndpoint, Credential, HttpMethodIsNotSupported
+
 # from unittest.mock import patch, AsyncMock
-
-import asyncio
-
-from rest_endpoints import GET
-from rest_endpoints import AsyncEndpoint
-from rest_endpoints import Credential
-from rest_endpoints import HttpMethodIsNotSupported
 
 
 class AsyncEndpointTestCase(unittest.IsolatedAsyncioTestCase):
