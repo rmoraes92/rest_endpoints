@@ -40,6 +40,5 @@ class CouldNotImportAioHttpModule(Exception):
 
     def __init__(self):
         super().__init__(
-            "make sure you installed with "
-            "pip install rest-endpoint[async]"
+            "make sure you installed with " "pip install rest-endpoint[async]"
         )
