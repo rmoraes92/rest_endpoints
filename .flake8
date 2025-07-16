@@ -1,5 +1,0 @@
-[flake8]
-exclude = __pycache__/*,env/*,.git/*,build/*
-max-line-length = 80
-per-file-ignores =
-    ./endpoints/__init__.py:F401
