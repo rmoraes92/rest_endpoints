@@ -2,7 +2,7 @@ import logging
 import sys
 
 
-def setup_logger(log_level=logging.INFO, file_handler_path=None):
+def setup_logger(log_level=logging.INFO, file_handler_path=None) -> logging.Logger:
     """
     Set up a logger that outputs to both stdout and a file named logs.txt
 
@@ -35,13 +35,4 @@ def setup_logger(log_level=logging.INFO, file_handler_path=None):
     return logger
 
 
-# Example usage
-if __name__ == "__main__":
-    logger = setup_logger()
-
-    # Test logging at different levels
-    logger.debug("This is a debug message")
-    logger.info("This is an info message")
-    logger.warning("This is a warning message")
-    logger.error("This is an error message")
-    logger.critical("This is a critical message")
+logger = setup_logger()
