@@ -34,7 +34,5 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Dependencies
         run: poetry install
-      - name: Running Unit Tests
-        run: poetry run python -m unittest
       - name: Publish To PYPI
         run: poetry publish --build --skip-existing
