@@ -1,19 +1,17 @@
 [tool.poetry]
 name = "rest-endpoints"
-version = "0.2.0"
+version = "0.2.1"
 description = "A object oriented library that helps you map and organize your HTTP ReST API endpoint calls."
 authors = ["Ramon Moraes <ramonmoraes.foss@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
-packages = [{include = "rest_endpoints", from = "src"}]
+packages = [{ include = "rest_endpoints", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.9.0"
 requests = "^2.32.3"
-
-[tool.poetry.extras]
-async = ["aiohttp"]
+aiohttp = { extras = ["async"], version = "^3.12.14" }
 
 [tool.poetry.group.dev.dependencies]
 packaging = "^24.2"
