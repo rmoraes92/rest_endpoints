@@ -34,3 +34,12 @@ class HttpMethodIsNotSupported(Exception):
         """
         msg = f'"{method}" is not in the list of supported methods: {methods}'
         super().__init__(msg)
+
+
+class CouldNotImportAioHttpModule(Exception):
+
+    def __init__(self):
+        super().__init__(
+            "make sure you installed with "
+            "pip install rest-endpoint[async]"
+        )
